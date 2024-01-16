@@ -32,4 +32,19 @@ class Product extends Category
         $this->image = $image;
         $this->price = $price;
     }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getImage(): string
+    {
+        return $this->image;
+    }
+
+    public function getPrice()
+    {
+        return $this->price;
+    }
 }
