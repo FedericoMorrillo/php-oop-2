@@ -7,11 +7,11 @@ $dog = new Category('dog');
 $cat = new Category('cat');
 
 //articoli
-$dog_food = new Product('Croccantini "Miglior Cane"', 'croccantini-cane.jpg', 5, $dog);
-$cat_food = new Product('Croccantini "Fufi Top"', 'croccantini-gatto.jpg', 5, $cat);
+$dog_food = new Article('Croccantini "Miglior Cane"', 'croccantini-cane.jpg', 5, $dog, 'food');
+$cat_food = new Article('Croccantini "Fufi Top"', 'croccantini-gatto.jpg', 5, $cat, 'food');
 
-$cat_toy = new product('Palo tiragraffi', 'palo-gatto.jpg', 15, $cat);
-$dog_toy = new product('pallina in Stoffa', 'palla-cane.jpg', 6, $dog);
+$cat_toy = new Article('Palo tiragraffi', 'palo-gatto.jpg', 15, $cat, 'toy');
+$dog_toy = new Article('pallina in Stoffa', 'palla-cane.jpg', 6, $dog, 'toy');
 
-$dog_kettel = new product('cuccia per cani xl', 'cuccia-cane.jpg', 70, $dog);
-$cat_kettel = new product('cuccia per gatti', 'cuccia-gatto.jpg', 45, $cat);
+$dog_kettel = new Article('cuccia per cani xl', 'cuccia-cane.jpg', 70, $dog, 'kettel');
+$cat_kettel = new Article('cuccia per gatti', 'cuccia-gatto.jpg', 45, $cat, 'kettel');

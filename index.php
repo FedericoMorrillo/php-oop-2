@@ -32,18 +32,22 @@
             <div class="col">
                 <h2>Dogs</h2>
                 <div class="flex justify-center">
-                    <?php foreach ([$dog_food, $dog_toy, $dog_kettel] as $product) : ?>
+                    <?php foreach ([$dog_food, $dog_toy, $dog_kettel] as $article) : ?>
                         <div class="card">
                             <ul>
                                 <li class="image">
-                                    <img src="img/<?= $product->getImage() ?>" alt="Product Image">
+                                    <img src="img/<?= $article->getImage() ?>" alt="Product Image">
                                 <li>
                                 <li class="name pad text-center">
-                                    <h3><?= $product->getName() ?></h3>
+                                    <h3><?= $article->getName() ?></h3>
                                 </li>
-                                <li class="prezzo pad text-end">
-                                    <h4>€<?= $product->getPrice() ?></h4>
+                                <li>
+                                    <h4><?= $article->getTipology() ?></h4>
+                                </li>
+                                <li class=" pad text-end">
+                                    <h4>€<?= $article->getPrice() ?></h4>
                                     <button class="btn">Acquista</button>
+
                                 </li>
                             </ul>
                         </div>
@@ -54,17 +58,20 @@
             <div class="col">
                 <h2>Cats</h2>
                 <div class="flex justify-center">
-                    <?php foreach ([$cat_food, $cat_toy, $cat_kettel] as $product) : ?>
+                    <?php foreach ([$cat_food, $cat_toy, $cat_kettel] as $article) : ?>
                         <div class="card">
                             <ul>
                                 <li class="image">
-                                    <img src="img/<?= $product->getImage() ?>" alt="Product Image">
+                                    <img src="img/<?= $article->getImage() ?>" alt="Product Image">
                                 <li>
                                 <li class="name pad text-center">
-                                    <h3><?= $product->getName() ?></h3>
+                                    <h3><?= $article->getName() ?></h3>
+                                </li>
+                                <li>
+                                    <h4><?= $article->getTipology() ?></h4>
                                 </li>
                                 <li class="prezzo pad text-end">
-                                    <h4>€<?= $product->getPrice() ?></h4>
+                                    <h4>€<?= $article->getPrice() ?></h4>
                                     <button class="btn">Acquista</button>
                                 </li>
                             </ul>

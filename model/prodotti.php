@@ -16,14 +16,26 @@ class Category
     }
 }
 
-// Creiamo la classe con i prodotti
-class Product extends Category
+// Creiamo la classe per i prodotti
+trait Product
 {
+    private $tipology;
+
+    public function getTipology(): string
+    {
+        return $this->tipology;
+    }
+}
+
+class Article extends Category
+{
+
+    use Product;
     private $name;
     private $image;
     private $price;
 
-    public function __construct(string $name, string $image, $price, Category $category)
+    public function __construct(string $name, string $image, $price, Category $category, string $tipology)
     {
         // costruttore della classe genitore
         parent::__construct($category->getCategory());
@@ -31,6 +43,7 @@ class Product extends Category
         $this->name = $name;
         $this->image = $image;
         $this->price = $price;
+        $this->tipology = $tipology;
     }
 
     public function getName(): string
