@@ -40,6 +40,10 @@ class Article extends Category
         // costruttore della classe genitore
         parent::__construct($category->getCategory());
 
+        if (!is_numeric($price)) {
+            throw new Exception('Il prezzo non è un numero.');
+        }
+
         $this->name = $name;
         $this->image = $image;
         $this->price = $price;
